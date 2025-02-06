@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 50px;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        nav {
+            margin-top: 30px;
+        }
+        nav a {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 1.2em;
+            text-decoration: none;
+            color: white;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to Farmer Management</h2>
+    <nav>
+        <a href="register.html">Register</a> |
+        <a href="login.html">Login</a> 
+    </nav>
+
+    <script>
+        // Redirect to respective pages
+        document.querySelector("a[href='register.html']").addEventListener("click", function(event) {
+            window.location.href = "register.html";
+        });
+        document.querySelector("a[href='login.html']").addEventListener("click", function(event) {
+            window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
+
+
+

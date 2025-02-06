@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            text-align: center;
+        }
+        h2 {
+            margin-top: 50px;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .details-container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #388E3C;
+        }
+        .soil-details-container {
+            margin-top: 30px;
+        }
+        .soil-details-container p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <h2>Farmer Dashboard</h2>
+    <div id="farmerDetails" class="details-container">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Mobile:</strong> <span id="mobile"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Address:</strong> <span id="address"></span></p>
+        <p><strong>Coordinates:</strong> <span id="coordinates"></span></p>
+        <p><strong>Primary Crop:</strong> <span id="primaryCrop"></span></p>
+        <p><strong>Water Resource:</strong> <span id="waterResource"></span></p>
+        <p><strong>Land Area:</strong> <span id="landArea"></span> acres</p>
+    </div>
+
+    <!-- Soil Details Section -->
+    <div class="soil-details-container">
+        <h3>Soil and Environmental Details</h3>
+        <p><strong>Soil Moisture:</strong> <span id="soilMoisture"></span>%</p>
+        <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+        <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+        <p><strong>Irrigation Status:</strong> <span id="irrigationStatus"></span></p>
+    </div>
+
+    <div>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+      async function fetchFarmerDetails() {
+          const email = localStorage.getItem("email");
+  
+          if (!email) {
+              document.getElementById("farmerDetails").innerHTML = `<p>Error: No email found. Please login again.</p>`;
+              return;
+          }
+  
+          try {
+              const response = await fetch(`http://localhost:5000/api/farmers/${email}`);
+              const data = await response.json();
+              
+              if (response.ok) {
+                  document.getElementById("name").innerText = data.name;
+                  document.getElementById("mobile").innerText = data.mobile;
+                  document.getElementById("email").innerText = data.email;
+                  document.getElementById("address").innerText = data.address;
+                  document.getElementById("coordinates").innerText = data.coordinates;
+                  document.getElementById("primaryCrop").innerText = data.primaryCrop;
+                  document.getElementById("waterResource").innerText = data.waterResource;
+                  document.getElementById("landArea").innerText = data.landArea;
+              } else {
+                  document.getElementById("farmerDetails").innerHTML = `<p>Error: ${data.message}</p>`;
+              }
+          } catch (error) {
+              document.getElementById("farmerDetails").innerHTML = `<p>Failed to fetch details.</p>`;
+          }
+      }
+
+      async function fetchSoilDetails() {
+          const email = localStorage.getItem("email");
+
+          if (!email) return;
+
+          try {
+              const response = await fetch(`http://localhost:5000/api/soil/${email}`);
+              const data = await response.json();
+
+              if (response.ok) {
+                  document.getElementById("soilMoisture").innerText = data.soilMoisture;
+                  document.getElementById("temperature").innerText = data.temperature;
+                  document.getElementById("humidity").innerText = data.humidity;
+                  document.getElementById("irrigationStatus").innerText = data.irrigationStatus;
+              } else {
+                  document.querySelector(".soil-details-container").innerHTML = `<p>Error: ${data.message}</p>`;
+              }
+          } catch (error) {
+              document.querySelector(".soil-details-container").innerHTML = `<p>Failed to fetch soil details.</p>`;
+          }
+      }
+
+      fetchFarmerDetails();
+      fetchSoilDetails();
+
+      function logout() {
+        localStorage.removeItem("email");
+        localStorage.removeItem("token");
+        window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
