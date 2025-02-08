@@ -1,0 +1,285 @@
+{
+    "crops": [
+      {
+        "crop_name": "Rice",
+        "soil_types": [
+          {
+            "soil_type": "Alluvial",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.15, "max": 0.20},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 7, "max": 10},
+                "irrigation_depth_m": {"min": 0.02, "max": 0.03},
+                "irrigation_interval_days": {"min": 3, "max": 4},
+                "optimal_moisture_m3_per_m3": {"min": 0.80, "max": 0.90}
+              },
+              {
+                "phase": "Vegetative",
+                "duration_days": {"min": 30, "max": 50},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.05},
+                "irrigation_interval_days": {"min": 5, "max": 7},
+                "optimal_moisture_m3_per_m3": {"min": 0.80, "max": 0.90}
+              },
+              {
+                "phase": "Reproductive",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.07},
+                "irrigation_interval_days": {"min": 7, "max": 10},
+                "optimal_moisture_m3_per_m3": {"min": 0.80, "max": 0.85}
+              }
+            ]
+          },
+          {
+            "soil_type": "Black",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.12, "max": 0.18},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 7, "max": 10},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.04},
+                "irrigation_interval_days": {"min": 2, "max": 3},
+                "optimal_moisture_m3_per_m3": {"min": 0.75, "max": 0.85}
+              },
+              {
+                "phase": "Vegetative",
+                "duration_days": {"min": 30, "max": 50},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.06},
+                "irrigation_interval_days": {"min": 4, "max": 6},
+                "optimal_moisture_m3_per_m3": {"min": 0.75, "max": 0.85}
+              }
+            ]
+          },
+          {
+            "soil_type": "Red",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.08, "max": 0.12},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 7, "max": 10},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 2, "max": 3},
+                "optimal_moisture_m3_per_m3": {"min": 0.70, "max": 0.80}
+              },
+              {
+                "phase": "Vegetative",
+                "duration_days": {"min": 30, "max": 50},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.07},
+                "irrigation_interval_days": {"min": 3, "max": 4},
+                "optimal_moisture_m3_per_m3": {"min": 0.70, "max": 0.80}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "crop_name": "Wheat",
+        "soil_types": [
+          {
+            "soil_type": "Alluvial",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.15, "max": 0.20},
+            "growth_phases": [
+              {
+                "phase": "Tillering",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 10, "max": 12},
+                "optimal_moisture_m3_per_m3": {"min": 0.50, "max": 0.60}
+              },
+              {
+                "phase": "Stem Elongation",
+                "duration_days": {"min": 20, "max": 30},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.06},
+                "irrigation_interval_days": {"min": 12, "max": 15},
+                "optimal_moisture_m3_per_m3": {"min": 0.50, "max": 0.55}
+              }
+            ]
+          },
+          {
+            "soil_type": "Black",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.12, "max": 0.18},
+            "growth_phases": [
+              {
+                "phase": "Tillering",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.04},
+                "irrigation_interval_days": {"min": 12, "max": 14},
+                "optimal_moisture_m3_per_m3": {"min": 0.55, "max": 0.65}
+              },
+              {
+                "phase": "Heading",
+                "duration_days": {"min": 10, "max": 15},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 14, "max": 18},
+                "optimal_moisture_m3_per_m3": {"min": 0.50, "max": 0.60}
+              }
+            ]
+          },
+          {
+            "soil_type": "Red",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.08, "max": 0.12},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 7, "max": 10},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.04},
+                "irrigation_interval_days": {"min": 7, "max": 10},
+                "optimal_moisture_m3_per_m3": {"min": 0.45, "max": 0.55}
+              },
+              {
+                "phase": "Ripening",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.02, "max": 0.03},
+                "irrigation_interval_days": {"min": 15, "max": 20},
+                "optimal_moisture_m3_per_m3": {"min": 0.40, "max": 0.50}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "crop_name": "Maize",
+        "soil_types": [
+          {
+            "soil_type": "Alluvial",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.15, "max": 0.20},
+            "growth_phases": [
+              {
+                "phase": "Vegetative",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 7, "max": 10},
+                "optimal_moisture_m3_per_m3": {"min": 0.60, "max": 0.70}
+              },
+              {
+                "phase": "Tasseling",
+                "duration_days": {"min": 15, "max": 20},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.06},
+                "irrigation_interval_days": {"min": 8, "max": 12},
+                "optimal_moisture_m3_per_m3": {"min": 0.65, "max": 0.75}
+              }
+            ]
+          },
+          {
+            "soil_type": "Black",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.12, "max": 0.18},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 5, "max": 10},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.04},
+                "irrigation_interval_days": {"min": 5, "max": 7},
+                "optimal_moisture_m3_per_m3": {"min": 0.60, "max": 0.65}
+              }
+            ]
+          },
+          {
+            "soil_type": "Red",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.08, "max": 0.12},
+            "growth_phases": [
+              {
+                "phase": "Grain Filling",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 5, "max": 7},
+                "optimal_moisture_m3_per_m3": {"min": 0.55, "max": 0.65}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "crop_name": "Sugarcane",
+        "soil_types": [
+          {
+            "soil_type": "Alluvial",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.15, "max": 0.20},
+            "growth_phases": [
+              {
+                "phase": "Grand Growth",
+                "duration_days": {"min": 120, "max": 180},
+                "irrigation_depth_m": {"min": 0.06, "max": 0.08},
+                "irrigation_interval_days": {"min": 10, "max": 15},
+                "optimal_moisture_m3_per_m3": {"min": 0.75, "max": 0.85}
+              }
+            ]
+          },
+          {
+            "soil_type": "Black",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.12, "max": 0.18},
+            "growth_phases": [
+              {
+                "phase": "Tillering",
+                "duration_days": {"min": 60, "max": 90},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.07},
+                "irrigation_interval_days": {"min": 12, "max": 18},
+                "optimal_moisture_m3_per_m3": {"min": 0.70, "max": 0.80}
+              }
+            ]
+          },
+          {
+            "soil_type": "Red",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.08, "max": 0.12},
+            "growth_phases": [
+              {
+                "phase": "Germination",
+                "duration_days": {"min": 30, "max": 45},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 5, "max": 7},
+                "optimal_moisture_m3_per_m3": {"min": 0.65, "max": 0.75}
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "crop_name": "Cotton",
+        "soil_types": [
+          {
+            "soil_type": "Alluvial",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.15, "max": 0.20},
+            "growth_phases": [
+              {
+                "phase": "Flowering",
+                "duration_days": {"min": 30, "max": 40},
+                "irrigation_depth_m": {"min": 0.03, "max": 0.04},
+                "irrigation_interval_days": {"min": 10, "max": 14},
+                "optimal_moisture_m3_per_m3": {"min": 0.55, "max": 0.65}
+              }
+            ]
+          },
+          {
+            "soil_type": "Black",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.12, "max": 0.18},
+            "growth_phases": [
+              {
+                "phase": "Boll Development",
+                "duration_days": {"min": 50, "max": 60},
+                "irrigation_depth_m": {"min": 0.04, "max": 0.05},
+                "irrigation_interval_days": {"min": 15, "max": 20},
+                "optimal_moisture_m3_per_m3": {"min": 0.50, "max": 0.60}
+              }
+            ]
+          },
+          {
+            "soil_type": "Red",
+            "moisture_holding_capacity_m3_per_m3": {"min": 0.08, "max": 0.12},
+            "growth_phases": [
+              {
+                "phase": "Vegetative",
+                "duration_days": {"min": 50, "max": 60},
+                "irrigation_depth_m": {"min": 0.05, "max": 0.06},
+                "irrigation_interval_days": {"min": 7, "max": 10},
+                "optimal_moisture_m3_per_m3": {"min": 0.45, "max": 0.55}
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "unit_definitions": {
+      "moisture_holding_capacity": "m³/m³ (volumetric water-holding capacity of the soil)",
+      "irrigation_depth_m": "meters of water applied per irrigation cycle",
+      "optimal_moisture": "m³/m³ (volumetric water content, 0.0 = dry, 1.0 = saturated)"
+    }
+  }
