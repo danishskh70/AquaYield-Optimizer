@@ -1,0 +1,130 @@
+/* General Container Styling */
+.dashboard-container1 {
+  
+  position: relative;
+  background: url(Public/assets/background4.jpg) no-repeat center center / cover;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Backdrop Effect (Blur the background when the form is open) */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background */
+  z-index: 10;
+  backdrop-filter: blur(5px); /* Apply background blur */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+  opacity: 0; /* Initially hidden */
+}
+
+/* Show Backdrop when form is visible */
+.backdrop.show {
+  opacity: 1; /* Show backdrop when form is open */
+}
+
+/* Form Modal Styling */
+.form-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 20; /* Ensure the form is above the backdrop */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  width: 800px;
+  max-width: 90%; /* Make it responsive for smaller screens */
+  max-height: 80vh;
+  overflow-y: auto;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Show Form Modal (Smooth Transition) */
+.form-modal.show {
+  opacity: 1;
+  transform: translate(-50%, -50%); /* No scaling effect on form size */
+}
+
+/* Card Container Styling */
+.card-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Individual Card Styling */
+.card {
+  background-color:#ffffffb0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  
+  width: 200px;
+    height: 242px;
+}
+
+
+/* Add New Card Styling with "+" Symbol */
+.add-card {
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 200px;
+  height: 242px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+
+.add-card:hover {
+  background-color: #d9d9d9;
+}
+
+.add-symbol {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card:hover{
+  background-color: #faf7f7;
+}
+
+/* Button Styling for Auto Coordinates */
+.auto-coordinates-btn {
+  background-color: #2196F3; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 39%;
+  padding: 12px;
+}
+
+.auto-coordinates-btn:hover {
+  background-color: #0b7dda; /* Darker blue on hover */
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}

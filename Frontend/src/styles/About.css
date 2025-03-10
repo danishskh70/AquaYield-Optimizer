@@ -1,0 +1,116 @@
+NotFound.css
+/* Container Styling */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* card1 Styling */
+.card1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 500px;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* card1 Hover Effect */
+.card1:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Section */
+.card1 img {
+  width: 150px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Image Hover Effect */
+.card1:hover img {
+  transform: scale(1.05);
+}
+
+/* card1 Content */
+.card1-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1rem;
+}
+
+/* card1 Title */
+.card1-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* card1 Subtitle */
+.card1-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+/* card1 Text */
+.card1-text {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Social Links */
+.card1-link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  color: #0077b5;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+/* GitHub Link Color */
+.card1-link:nth-child(2) {
+  color: #333;
+}
+
+/* Social Icons Hover Effect */
+.card1-link:hover {
+  color: #ff7b00;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card1 {
+    flex-direction: column;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .card1 img {
+    width: 120px;
+    height: 140px;
+  }
+
+  .card1-body {
+    padding-left: 0;
+  }
+}

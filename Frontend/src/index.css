@@ -1,0 +1,32 @@
+/* Ensuring the body and main content area take up full height */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body fills the viewport */
+  }
+  
+  /* The main content wrapper */
+  .main {
+    flex-grow: 1;  /* This allows the main content to expand and take available space */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #7fce50; /* Earthy green color */
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+  }
+  

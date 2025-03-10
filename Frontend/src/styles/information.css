@@ -1,0 +1,360 @@
+:root {
+    --primary-color: #7F1D99; /* Violet */
+    --secondary-color: #E0C6F2; /* Light Violet */
+    --background-color: #f9f9f9; /* Light background */
+    --text-color: #4A5568; /* Gray text */
+    --border-color: #d1d5db; /* Light gray border */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Use a modern font */
+    line-height: 1.6; /* Improved line height */
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Roboto', sans-serif; /* Different font for headings */
+    font-weight: 700; /* Bold headings */
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+}
+
+
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.spinner {
+    border: 4px solid var(--border-color);
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animated-background {
+    background: linear-gradient(270deg, #E0C6F2, #FFFFFF, #E0C6F2);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+.shadow-lg {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.diagram {
+    min-height: 100px; /* Minimum height */
+    min-width: 100px;  /* Minimum width */
+    width: 100%;       /* Full width of the container */
+    height: auto;      /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the container while maintaining aspect ratio */
+}
+
+@media (max-width: 768px) {
+    .main_container {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .button {
+        width: 100%; /* Full width for buttons on mobile */
+    }
+}
+
+
+.main_container {
+    background: linear-gradient(to bottom, #E0C6F2, #FFFFFF);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Dataset Table Styles */
+.dataset-table {
+    background-color: #f9f9f9; /* Light background for the table */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 50px;
+}
+
+/* Styles for the soil type cards */
+.soil-card {
+    margin-bottom: 40px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #7F1D99; /* Violet border */
+    transition: transform 0.2s ease; /* Updated transition duration */
+    flex: 1; /* Allow cards to grow equally */
+}
+
+.rounded-lg.shadow-md17{
+    margin-left: 200px;
+    height:auto;
+    width: 1000px;
+}
+
+.rounded-lg.shadow-md{
+    height: auto;
+    width:500px;
+    margin-bottom: 20px;
+}
+
+/* Map styles */
+.map img {
+    height: 400px; /* Make image fill the container */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Hover effect for the soil type cards */
+.soil-card:hover {
+    transform: translateY(-5px); /* Updated hover effect */
+}
+
+/* Title styles */
+.soil-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #7F1D99; /* Violet color */
+}
+
+.justify-between.mb-6{  
+     display: inline-flex;
+}
+
+/* Text styles */
+.soil-text {
+    color: #4A5568; /* Gray color */
+    margin-top: 0.5rem;
+}
+
+/* Conclusion card styles */
+.conclusion-card {
+    background-color: #f9f9f9; /* Light background for the conclusion card */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.mb-4{
+    margin-top: 30px;
+}
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    margin-bottom: 50px;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+th {
+    background-color: #7F1D99; /* Violet background for header */
+    color: white; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tr:hover {
+    background-color: #e0c6f2; /* Light violet on row hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .soil-card {
+        margin-bottom: 1rem; /* Add margin for spacing on smaller screens */
+    }
+}
+
+/* Styles for the rainfall forecast section */
+.rainfall-forecast {
+    background-color: #f9f9f9; /* Light background for the section */
+    padding: 2rem; /* Increased padding for better spacing */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 2rem; /* Space below the section */
+}
+
+/* Heading styles for Rainfall Forecast */
+.rainfall-forecast h2 {
+    font-size: 2rem; /* Larger font size for main headings */
+    color: #2d3436; /* Dark text color */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.rainfall-forecast h3 {
+    font-size: 1.5rem; /* Medium font size for subheadings */
+    color: #2d3436; /* Dark text color */
+    margin-bottom: 0.75rem; /* Space below the subheading */
+}
+
+.rainfall-forecast h4 {
+    font-size: 1.25rem; /* Smaller font size for sub-subheadings */
+    color: #2d3436; /* Dark text color */
+    margin-bottom: 0.5rem; /* Space below the sub-subheading */
+}
+
+/* Paragraph styles */
+.rainfall-forecast p {
+    color: #4A5568; /* Gray color for text */
+    line-height: 1.6; /* Improved line height for readability */
+    margin-bottom: 1rem; /* Space below paragraphs */
+}
+
+/* List styles */
+.rainfall-forecast ul {
+    margin-left: 1.5rem; /* Indentation for lists */
+    margin-bottom: 1rem; /* Space below lists */
+}
+
+/* Table styles within Rainfall Forecast */
+.rainfall-forecast table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 1rem; /* Margin above the table */
+}
+
+.rainfall-forecast th, .rainfall-forecast td {
+    padding: 0.75rem; /* Padding for table cells */
+    text-align: left; /* Left align text */
+    border: 1px solid #d1d5db; /* Light gray border for cells */
+}
+
+.rainfall-forecast th {
+    background-color: #7F1D99; /* Violet background for header */
+    color: white; /* White text for header */
+}
+
+/* Responsive adjustments for Rainfall Forecast */
+@media (max-width: 768px) {
+    .rainfall-forecast {
+        padding: 1rem; /* Reduced padding on smaller screens */
+    }
+
+    .rainfall-forecast h2 {
+        font-size: 1.5rem; /* Smaller font size for headings */
+    }
+
+    .rainfall-forecast h3 {
+        font-size: 1.25rem; /* Smaller font size for subheadings */
+    }
+
+    .rainfall-forecast h4 {
+        font-size: 1rem; /* Smaller font size for sub-subheadings */
+    }
+}
+
+/* Styles for the scenario cards */
+.scenario-card {
+    background-color: #ffffff; /* White background for the cards */
+    padding: 1.5rem; /* Padding inside the cards */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for scenario cards */
+.scenario-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Table styles within scenario cards */
+.scenario-card table {
+    width: 100%; /* Full width for tables */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 1rem; /* Margin above the table */
+}
+
+.scenario-card th, .scenario-card td {
+    padding: 0.75rem; /* Padding for table cells */
+    text-align: left; /* Left align text */
+    border: 1px solid #d1d5db; /* Light gray border for cells */
+}
+
+.scenario-card th {
+    background-color: #7F1D99; /* Violet background for header */
+    color: white; /* White text for header */
+}
+
+/* Responsive adjustments for scenario cards */
+@media (max-width: 768px) {
+    .scenario-card {
+        margin-bottom: 1rem; /* Add margin for spacing on smaller screens */
+    }
+}
+
+/* New styles for comparison table */
+.comparison-table {
+    min-width: 1000px; /* Minimum width for the comparison table */
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+/* New styles for crop badge */
+.crop-badge {
+    background-color: #f0fdf4; /* Light green background */
+    color: #166534; /* Dark green text */
+    padding: 0.25rem 0.75rem; /* Padding for the badge */
+    border-radius: 9999px; /* Fully rounded corners */
+    font-size: 0.875rem; /* Font size for the badge */
+}
+
+/* Adjustments for conclusion card list items */
+.conclusion-card li {
+    padding: 0.5rem 0; /* Padding for list items */
+    border-bottom: 1px solid #e5e7eb; /* Bottom border for list items */
+}
+
+.conclusion-card li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Media query adjustments */
+@media (max-width: 768px) {
+    .soil-map img {
+        width: 100%; /* Make images responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+    
+    .comparison-table {
+        display: block; /* Ensure table is block-level */
+        width: 100%; /* Full width for the table */
+    }
+}
